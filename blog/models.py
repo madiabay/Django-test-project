@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 
 """
@@ -16,6 +17,7 @@ class Category(models.Model):
         return self.title
     
     class Meta:
+        verbose_name_plural = 'Categories'
         ordering = ['title']
 
 class Tag(models.Model):
